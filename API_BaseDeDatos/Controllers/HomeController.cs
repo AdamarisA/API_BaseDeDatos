@@ -23,6 +23,19 @@ namespace API_BaseDeDatos.Controllers
             return View();
         }
 
+        // Recibe ?query=... y redirige a Pokemon/DetallePorNombre
+        [HttpGet]
+        public IActionResult Search(string query)
+        {
+            if (string.IsNullOrWhiteSpace(query))
+            {
+                return RedirectToAction(nameof(Index));
+            }
+
+            var name = query.Trim();
+            return RedirectToAction("DetallePorNombre", "Pokemon", new { name });
+        }
+
         [ResponseCache(Duration = 0, Location = ResponseCacheLocation.None, NoStore = true)]
         public IActionResult Error()
         {

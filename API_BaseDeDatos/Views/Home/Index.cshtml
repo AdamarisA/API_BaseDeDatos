@@ -2,21 +2,29 @@
     ViewData["Title"] = "Home Page";
 }
 
+<body style="background: -webkit-linear-gradient(90deg, #fafafa, #3292e7);
+             background: linear-gradient(90deg, #fafafa, #3292e7);">
 
+    <div class="text-center" style="font-family: 'Poppins', sans-serif; margin: 40px;">
 
-<div class="text-center" style="font-family: 'Poppins', sans-serif; margin: 40px;">
+        <h1 class="display-4" style="color: darkblue; font-weight: bold; margin-bottom: 20px;">
+            Bienvenido a la Página de Pokemones
+        </h1>
+        <p style="font-size: 18px; color:gray; max-width: 700px; margin: auto; line-height: 1.6;">
+            Esta es una plataforma donde podrás consultar los <strong>datos de tus Pokémon favoritos</strong>.
+        </p>
 
+        <!-- Buscador -->
+        <form method="get" action="/Home/Search" style="margin: 30px auto; max-width: 400px;">
+            <input type="text" name="query" placeholder="Buscar Pokémon..."
+                   style="width: 70%; padding: 10px; border: 1px solid #ccc; border-radius: 5px;" />
+            <button type="submit"
+                    style="padding: 10px 15px; background-color: darkblue; color: white; border: none; border-radius: 5px; cursor: pointer;">
+                Buscar
+            </button>
+        </form>
 
+        <hr style="border: 1px solid darkred; width: 60%; margin: 30px auto;" />
+    </div>
 
-    <h1 class="display-4" style="color: darkblue; font-weight: bold; margin-bottom: 20px;">
-        Bienvenido a la Página de Pokemones
-    </h1>
-    <p style="font-size: 18px; color:gray; max-width: 700px; margin: auto; line-height: 1.6;">
-        Esta es una plataforma donde podrás consultar los <strong>datos de tus Pokémon favoritos</strong>.
-
-    </p>
-    <hr style="border: 1px solid darkred; width: 60%; margin: 30px auto;" />
-    <p style="font-size: 16px; color: #555;">
-
-    </p>
-</div>
+</body>
