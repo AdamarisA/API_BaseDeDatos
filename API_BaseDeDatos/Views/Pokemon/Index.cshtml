@@ -1,0 +1,59 @@
+﻿@model IEnumerable<API_BaseDeDatos.Models.Pokemon>
+
+
+<!DOCTYPE html>
+<html>
+<head>
+    <style>
+        body {
+            font-family: 'Poppins', 'Sans Serif Collection';
+            background: white
+          
+            margin: 20px;
+            color: white; 
+
+        h2 {
+            text-align: center;
+            color: darkblue;
+            margin-bottom: 20px;
+            
+        }
+
+        ul {
+            list-style: none; 
+            padding: 0;
+            max-width: 400px;
+            margin: auto;
+            color :azure
+            
+        }
+
+        li {
+            background-color: rgba(0,0,0,0.4); 
+            margin: 8px 0;
+            padding: 10px;
+            border-radius: 8px;
+            text-align: center;
+            font-size: 18px;
+            transition: transform 0.2s;
+            color :black;
+        }
+
+        li:hover {
+            transform: scale(1.05);
+            background-color: darkblue;
+        }
+
+    </style>
+</head>
+<body>
+    <h2>Lista de Pokémon</h2>
+    <ul>
+        @foreach (var p in Model)
+        {
+            <li>@p.Name</li>
+        }
+    </ul>
+</body>
+</html>
+

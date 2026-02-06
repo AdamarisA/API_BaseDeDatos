@@ -1,0 +1,9 @@
+﻿@model IEnumerable<API_BaseDeDatos.Models.Pokemon>
+
+<h2>Lista de Pokémon</h2>
+<ul>
+    @foreach (var p in Model)
+    {
+        <li>@p.Name</li>
+    }
+</ul>
